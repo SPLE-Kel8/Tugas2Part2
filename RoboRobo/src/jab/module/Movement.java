@@ -14,7 +14,11 @@ public class Movement extends Part {
 	}
 
 	public void move() {
-		bot.setAhead(0.0001);
+		bot.setAhead(100 * direction);
+		bot.setTurnRight(45);
+		direction *= -1;
 	}
+
+	int direction = 1;
 
 }

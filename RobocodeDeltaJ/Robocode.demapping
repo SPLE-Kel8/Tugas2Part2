@@ -3,3 +3,12 @@ NoMovement:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+ZigZag:
+<decore/ZigZag.decore>
+
+Closest:
+<decore/Closest.decore>
+
+MaximumPowerGun:
+<decore/MaximumGun.decore>

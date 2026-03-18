@@ -1,0 +1,25 @@
+delta MaximumGun {
+
+    modifies jab.module.Gun {
+
+        modifies fire() {
+            if (bot.enemy != null) {
+
+                double bulletPower = Math.min(3.0, bot.getEnergy() - 0.01);
+
+                if (bot.enemy.energy == 0) {
+                    bulletPower = 0;
+                }
+
+                bot.bulletPower = bulletPower;
+
+                if (bot.getGunHeat() == 0) {
+                    robocode.Bullet b = bot.setFireBullet(bulletPower);
+                    bot.registerBullet(b);
+                }
+            }
+        }
+
+    }
+
+}
