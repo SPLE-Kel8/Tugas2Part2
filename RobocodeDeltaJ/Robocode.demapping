@@ -24,3 +24,6 @@ RapidFire:
 
 DirectTargeting:
 <decore/DirectTargeting.decore>
+
+Orbit:
+<decore/Orbit.decore>

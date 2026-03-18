@@ -3,16 +3,17 @@
   <rootFeature minCardinality="1" maxCardinality="1" name="Module">
     <groups minCardinality="2" maxCardinality="3">
       <features minCardinality="1" maxCardinality="1" name="Radar">
-        <groups minCardinality="1" maxCardinality="1">
+        <groups maxCardinality="2">
           <features maxCardinality="1" name="SpinningRadar"/>
           <features maxCardinality="1" name="MouseRadar"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Movement">
-        <groups maxCardinality="5">
+        <groups maxCardinality="4">
           <features maxCardinality="1" name="NoMovement"/>
           <features maxCardinality="1" name="ZigZag"/>
           <features maxCardinality="1" name="RandomMovement"/>
+          <features maxCardinality="1" name="Orbit"/>
         </groups>
       </features>
     </groups>
