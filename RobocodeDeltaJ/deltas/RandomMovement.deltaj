@@ -1,0 +1,12 @@
+delta RandomMovement {
+    modifies jab.module.Movement {
+        modifies move() {
+            double moveDistance = (Math.random() * 200) - 100;
+            
+            double turnAngle = (Math.random() * 90) - 45;
+
+            bot.setAhead(moveDistance);
+            bot.setTurnRight(turnAngle);
+        }
+    }
+}

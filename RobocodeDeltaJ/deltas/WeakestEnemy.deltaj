@@ -1,0 +1,20 @@
+delta WeakestEnemy {
+    modifies jab.module.SelectEnemy {
+        
+        modifies select() {
+            java.util.Iterator<jab.module.BotInfo> iterator = bot.botsInfo.values().iterator();
+            double minEnergy = Double.MAX_VALUE;
+            jab.module.BotInfo selected = null;
+
+            while (iterator.hasNext()) {
+                jab.module.BotInfo botInfo = iterator.next();
+                
+                if ((!botInfo.teammate) && minEnergy > botInfo.energy) {
+                    selected = botInfo;
+                    minEnergy = botInfo.energy;
+                }
+            }
+            bot.enemy = selected;
+        }
+    }
+}

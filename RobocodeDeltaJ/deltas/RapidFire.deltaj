@@ -1,0 +1,10 @@
+delta RapidFire {
+    modifies jab.module.Gun {
+        
+        modifies fire() {
+            if (bot.getGunHeat() == 0 && bot.enemy != null) {
+                bot.setFire(0.1); 
+            }
+        }
+    }
+}

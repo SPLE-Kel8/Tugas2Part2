@@ -12,3 +12,15 @@ Closest:
 
 MaximumPowerGun:
 <decore/MaximumGun.decore>
+
+RandomMovement:
+<decore/RandomMovement.decore>
+
+WeakestEnemy:
+<decore/WeakestEnemy.decore>
+
+RapidFire:
+<decore/RapidFire.decore>
+
+DirectTargeting:
+<decore/DirectTargeting.decore>
