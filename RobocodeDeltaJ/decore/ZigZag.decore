@@ -1,0 +1,14 @@
+ configuration delta "ZigZag"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Movement.java>
+		{
+	addMember(<class:jab.module.Movement>, "int direction = 1;
+");
+	modifyStatementListContainer(<method:jab.module.Movement.move()>, "public void move() {
+	    	bot.setAhead(100 * direction);
+	    	bot.setTurnRight(45);
+	    	direction *= -1;
+	}
+", "ZigZag", false);
+	}
+	

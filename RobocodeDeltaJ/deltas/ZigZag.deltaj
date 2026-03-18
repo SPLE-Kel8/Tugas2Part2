@@ -1,0 +1,11 @@
+delta ZigZag {
+	modifies jab.module.Movement {
+		adds int direction = 1;
+
+		modifies move() {
+	    	bot.setAhead(100 * direction);
+	    	bot.setTurnRight(45);
+	    	direction *= -1;
+		}
+	}
+}
